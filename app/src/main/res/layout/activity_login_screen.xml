@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginScreen">
+
+
+    <ImageView
+        android:id="@+id/IvRegister"
+        android:layout_gravity="center"
+        android:layout_width="380dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="162dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/t1Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Waves of Food"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/t2Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deliver Favorite Food"
+        android:textSize="16sp"
+        android:textColor="@color/textColor"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/t3Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Login To Your Account"
+        android:textSize="25sp"
+        android:textColor="@color/textColor"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/editTextTextRegisterEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittextshape"
+        android:ems="10"
+        android:hint="Email or Phone Number"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColorHint="@color/material_dynamic_neutral_variant60" />
+
+    <EditText
+        android:id="@+id/editTextTextRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:background="@drawable/edittextshape"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/material_dynamic_neutral_variant60" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="or" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="Continue With" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/whitebutton"
+            android:drawableStart="@drawable/facebook"
+            android:paddingLeft="30dp"
+            android:text="Facebook" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/whitebutton"
+            android:drawableStart="@drawable/google"
+            android:paddingLeft="30dp"
+            android:text="Google" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="226dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/greenbuttongradient"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/t4Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:textColor="@color/textColor"
+        android:text="Don't have an Account ?" />
+
+</LinearLayout>
