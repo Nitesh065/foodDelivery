@@ -10,7 +10,7 @@ class LoginScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
-        val textButton: TextView = findViewById(R.id.t4Login)
+        val textButton: TextView = findViewById(R.id.t6Login)
         textButton.setOnClickListener {
             startActivity(Intent(this,RegisterScreen::class.java))
         }

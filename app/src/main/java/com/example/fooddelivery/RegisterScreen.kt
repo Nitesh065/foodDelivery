@@ -10,7 +10,7 @@ class RegisterScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_screen)
-        val textButton: TextView = findViewById(R.id.t4Register)
+        val textButton: TextView = findViewById(R.id.t6Register)
         textButton.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
         }
