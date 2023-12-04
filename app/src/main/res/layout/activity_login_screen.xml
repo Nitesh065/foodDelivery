@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,7 +10,7 @@
 
 
     <ImageView
-        android:id="@+id/IvRegister"
+        android:id="@+id/IvLogin"
         android:layout_gravity="center"
         android:layout_width="380dp"
         android:layout_marginTop="30dp"
@@ -17,7 +18,7 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/t1Register"
+        android:id="@+id/t1Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Waves of Food"
@@ -26,7 +27,7 @@
         android:textAlignment="center"
         />
     <TextView
-        android:id="@+id/t2Register"
+        android:id="@+id/t2Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Deliver Favorite Food"
@@ -35,7 +36,7 @@
         android:textAlignment="center"
         />
     <TextView
-        android:id="@+id/t3Register"
+        android:id="@+id/t3Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -46,7 +47,7 @@
         />
 
     <EditText
-        android:id="@+id/editTextTextRegisterEmailAddress"
+        android:id="@+id/etLoginEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_margin="10dp"
@@ -59,7 +60,7 @@
         android:textColorHint="@color/material_dynamic_neutral_variant60" />
 
     <EditText
-        android:id="@+id/editTextTextRegisterPassword"
+        android:id="@+id/etLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_margin="5dp"
@@ -72,7 +73,7 @@
         android:textColorHint="@color/material_dynamic_neutral_variant60" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/t4Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -81,7 +82,7 @@
         android:text="or" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/t5Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -96,7 +97,7 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/btnFbLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
@@ -107,7 +108,7 @@
             android:text="Facebook" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
+            android:id="@+id/btnGoogleLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -118,7 +119,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
+        android:id="@+id/btnLoginAc"
         android:layout_width="226dp"
         android:layout_height="66dp"
         android:layout_gravity="center"
@@ -128,7 +129,7 @@
         android:text="Login" />
 
     <TextView
-        android:id="@+id/t4Login"
+        android:id="@+id/t6Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
