@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/navigation_home"
+    <item   android:id="@+id/home"
         android:title="Home"
         android:icon="@drawable/home"
         >
 
     </item>
-    <item android:id="@+id/navigation_cart"
+    <item  android:id="@+id/cart"
         android:title="Store"
         android:icon="@drawable/cart"
         >
@@ -19,14 +19,14 @@
         >
 
     </item>
-    <item android:id="@+id/navigation_menu"
+    <item  android:id="@+id/history"
         android:title="menu"
         android:icon="@drawable/cart"
         >
 
     </item>
 
-    <item android:id="@+id/navigation_user"
+    <item   android:id="@+id/user"
         android:title="user"
         android:icon="@drawable/user"
         >
