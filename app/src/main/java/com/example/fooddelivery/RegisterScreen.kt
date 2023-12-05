@@ -12,7 +12,7 @@ class RegisterScreen : AppCompatActivity() {
         setContentView(R.layout.activity_register_screen)
         val textButton: TextView = findViewById(R.id.t6Register)
         textButton.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,Location::class.java))
         }
     }
 }
