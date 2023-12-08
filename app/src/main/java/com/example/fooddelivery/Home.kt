@@ -5,15 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView.ScaleType
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
-import com.example.fooddelivery.adapter.RecycleAdapter
-import com.example.fooddelivery.databinding.ActivityMainBinding
+import com.example.fooddelivery.adapter.MenuRecycleAdapter
 import com.example.fooddelivery.databinding.FragmentHomeBinding
 import com.example.fooddelivery.model.menuData
 
@@ -47,7 +44,7 @@ class Home : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.RecycleView)
         val layoutManager = LinearLayoutManager(view.context)
         val menuDataList = dummyList()
-        val adapter = RecycleAdapter(view.context,menuDataList)
+        val adapter = MenuRecycleAdapter(view.context,menuDataList)
 
 
 // imageList.add(SlideModel("String Url" or R.drawable)

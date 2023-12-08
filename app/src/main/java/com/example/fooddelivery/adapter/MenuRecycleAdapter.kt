@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddelivery.R
 import com.example.fooddelivery.model.menuData
 
-class RecycleAdapter (private val context: Context, private val menuData: List<menuData>):RecyclerView.Adapter<RecycleAdapter.ListHolder>() {
+class MenuRecycleAdapter (private val context: Context, private val menuData: List<menuData>):RecyclerView.Adapter<MenuRecycleAdapter.ListHolder>() {
     class ListHolder(view: View): RecyclerView.ViewHolder(view) {
         fun Bind(menu: menuData){
             val ivMenu: ImageView = itemView.findViewById(R.id.ivMenuCard)
-            val tvMenuName: TextView = itemView.findViewById(R.id.tvMenu1)
-            val tvMenuPrice: TextView = itemView.findViewById(R.id.tvMenu2)
+            val tvMenuName: TextView = itemView.findViewById(R.id.tvitemName)
+            val tvMenuPrice: TextView = itemView.findViewById(R.id.tvitemPrice)
             val tvMenuType: TextView = itemView.findViewById(R.id.tvMenu3)
             ivMenu.setImageResource(menu.image)
             tvMenuName.text = menu.name
