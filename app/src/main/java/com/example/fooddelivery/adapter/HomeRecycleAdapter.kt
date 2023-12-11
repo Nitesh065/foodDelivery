@@ -8,12 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddelivery.R
-import com.example.fooddelivery.model.menuData
+import com.example.fooddelivery.model.homeData
 
-class MenuRecycleAdapter (private val context: Context, private val menuData: List<menuData>):
-    RecyclerView.Adapter<MenuRecycleAdapter.ListHolder>() {
+class HomeRecycleAdapter (private val context: Context, private val menuData: List<homeData>):RecyclerView.Adapter<HomeRecycleAdapter.ListHolder>() {
     class ListHolder(view: View): RecyclerView.ViewHolder(view) {
-        fun Bind(menu: menuData){
+        fun Bind(menu: homeData){
             val ivMenu: ImageView = itemView.findViewById(R.id.ivMenuCard)
             val tvMenuName: TextView = itemView.findViewById(R.id.tvitemName)
             val tvMenuPrice: TextView = itemView.findViewById(R.id.tvitemPrice)

@@ -1,16 +1,15 @@
 package com.example.fooddelivery
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fooddelivery.adapter.CartRecycleAdapter
-import com.example.fooddelivery.model.Cartdata
+import com.example.fooddelivery.adapter.MenuRecycleAdapter
+import com.example.fooddelivery.model.homeData
+import com.example.fooddelivery.model.menuData
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,14 +18,13 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Cart.newInstance] factory method to
+ * Use the [Menu.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Cart : Fragment() {
+class Menu : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-   private var btnDelete: ImageButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,18 +35,13 @@ class Cart : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val recyclerView: RecyclerView = view.findViewById(R.id.rvCart)
-
+        val recyclerView: RecyclerView = view.findViewById(R.id.menuRecycleView)
         val layoutManager = LinearLayoutManager(view.context)
-        val cartDataList: MutableList<Cartdata> = dummyList()
-        Log.d("data","$cartDataList")
-
-        val adapter = CartRecycleAdapter(view.context,cartDataList)
+        val menuDataList = dummyList()
+        val adapter = MenuRecycleAdapter(view.context,menuDataList)
 
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
-
-
 
     }
 
@@ -57,7 +50,7 @@ class Cart : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        return inflater.inflate(R.layout.fragment_menu, container, false)
     }
 
     companion object {
@@ -67,24 +60,27 @@ class Cart : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Cart.
+         * @return A new instance of fragment Menu.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Cart().apply {
+            Menu().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
             }
     }
-    private fun dummyList():MutableList<Cartdata>{
-        var cartList = mutableListOf<Cartdata>()
-        cartList.add(Cartdata(R.drawable.menu1,"Herbal Pancake","$7",1))
-        cartList.add(Cartdata(R.drawable.menu2,"Herbal Pancake","$8",1))
-        cartList.add(Cartdata(R.drawable.menu3,"Herbal Pancake","$10",1))
-        return cartList
+    private fun dummyList():List<menuData>{
+        var menuList = mutableListOf<menuData>()
+        menuList.add(menuData(R.drawable.menu1,"Herbal Pancake","$7","Add"))
+        menuList.add(menuData(R.drawable.menu2,"Herbal Pancake","$8","Add"))
+        menuList.add(menuData(R.drawable.menu3,"Herbal Pancake","$10","Add"))
+        menuList.add(menuData(R.drawable.menu4,"Herbal Pancake","$10","Add"))
+        menuList.add(menuData(R.drawable.menu5,"Herbal Pancake","$10","Add"))
+        menuList.add(menuData(R.drawable.menu6,"Herbal Pancake","$10","Add"))
+        return menuList
 
     }
 }

@@ -5,14 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
-import com.example.fooddelivery.adapter.MenuRecycleAdapter
+import com.example.fooddelivery.adapter.HomeRecycleAdapter
 import com.example.fooddelivery.databinding.FragmentHomeBinding
-import com.example.fooddelivery.model.menuData
+import com.example.fooddelivery.model.homeData
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,7 +46,8 @@ class Home : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.RecycleView)
         val layoutManager = LinearLayoutManager(view.context)
         val menuDataList = dummyList()
-        val adapter = MenuRecycleAdapter(view.context,menuDataList)
+        val adapter = HomeRecycleAdapter(view.context,menuDataList)
+        val viewMenu: Button = view.findViewById(R.id.btnHome1)
 
 
 // imageList.add(SlideModel("String Url" or R.drawable)
@@ -57,12 +60,17 @@ class Home : Fragment() {
 
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
+        var  fullmenu = Menu();
+        viewMenu.setOnClickListener {
+            parentFragmentManager.beginTransaction().replace(R.id.fragmentContainerView2, fullmenu).commit()
+        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
@@ -86,11 +94,11 @@ class Home : Fragment() {
                 }
             }
     }
-    private fun dummyList():List<menuData>{
-        var menuList = mutableListOf<menuData>()
-        menuList.add(menuData(R.drawable.menu1,"Herbal Pancake","$7","Add"))
-        menuList.add(menuData(R.drawable.menu2,"Herbal Pancake","$8","Add"))
-        menuList.add(menuData(R.drawable.menu3,"Herbal Pancake","$10","Add"))
+    private fun dummyList():List<homeData>{
+        var menuList = mutableListOf<homeData>()
+        menuList.add(homeData(R.drawable.menu1,"Herbal Pancake","$7","Add"))
+        menuList.add(homeData(R.drawable.menu2,"Herbal Pancake","$8","Add"))
+        menuList.add(homeData(R.drawable.menu3,"Herbal Pancake","$10","Add"))
         return menuList
 
     }

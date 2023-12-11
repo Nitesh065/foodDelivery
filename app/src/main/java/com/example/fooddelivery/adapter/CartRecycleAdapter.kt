@@ -1,7 +1,6 @@
 package com.example.fooddelivery.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddelivery.R
 import com.example.fooddelivery.model.Cartdata
-import com.example.fooddelivery.model.menuData
 
 class CartRecycleAdapter(private val context: Context, private val cartData: MutableList<Cartdata>):
     RecyclerView.Adapter<CartRecycleAdapter.ListHolder>() {
