@@ -54,7 +54,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Name"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:padding="20dp"
         android:textColorHint="@color/material_dynamic_neutral_variant60" />
 

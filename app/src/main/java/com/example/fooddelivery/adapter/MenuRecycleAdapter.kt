@@ -14,9 +14,9 @@ class MenuRecycleAdapter (private val context: Context, private val menuData: Li
     RecyclerView.Adapter<MenuRecycleAdapter.ListHolder>() {
     class ListHolder(view: View): RecyclerView.ViewHolder(view) {
         fun Bind(menu: menuData){
-            val ivMenu: ImageView = itemView.findViewById(R.id.ivMenuCard)
-            val tvMenuName: TextView = itemView.findViewById(R.id.tvitemName)
-            val tvMenuPrice: TextView = itemView.findViewById(R.id.tvitemPrice)
+            val ivMenu: ImageView = itemView.findViewById(R.id.ivHistory)
+            val tvMenuName: TextView = itemView.findViewById(R.id.tvMenuItemName)
+            val tvMenuPrice: TextView = itemView.findViewById(R.id.tvMenuItemPrice)
             val tvMenuType: TextView = itemView.findViewById(R.id.tvMenu3)
             ivMenu.setImageResource(menu.image)
             tvMenuName.text = menu.name

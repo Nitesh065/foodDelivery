@@ -5,6 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.fooddelivery.adapter.HistoryRecycleAdapter
+import com.example.fooddelivery.adapter.MenuRecycleAdapter
+import com.example.fooddelivery.model.historyData
+import com.example.fooddelivery.model.menuData
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,6 +33,16 @@ class History : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val recyclerView: RecyclerView = view.findViewById(R.id.historyRecycleView)
+        val layoutManager = LinearLayoutManager(view.context)
+        val recycleDataList = dummyList()
+        val adapter = HistoryRecycleAdapter(view.context,recycleDataList)
+
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = adapter
     }
 
     override fun onCreateView(
@@ -55,5 +71,14 @@ class History : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun dummyList():List<historyData>{
+        var historyDataList = mutableListOf<historyData>()
+        historyDataList.add(historyData(R.drawable.menu1,"Herbal Pancake","Waroenk Kita","$35"))
+        historyDataList.add(historyData(R.drawable.menu2,"Herbal Pancake","Waroenk Kita","$35"))
+        historyDataList.add(historyData(R.drawable.menu3,"Herbal Pancake","Waroenk Kita","$43"))
+        return historyDataList
+
     }
 }

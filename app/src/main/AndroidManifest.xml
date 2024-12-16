@@ -13,6 +13,17 @@
         android:theme="@style/Theme.FoodDelivery"
         tools:targetApi="31">
         <activity
+            android:name=".OrderPlaced"
+            android:exported="false" />
+        <activity
+            android:name=".OrderDetail"
+            android:exported="false" />
+        <activity
+            android:name=".orderDetail"
+            android:exported="false"
+            android:label="@string/title_activity_order_detail"
+            android:theme="@style/Theme.FoodDelivery" />
+        <activity
             android:name=".Location"
             android:exported="false" />
         <activity

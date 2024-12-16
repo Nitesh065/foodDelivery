@@ -27,17 +27,7 @@ class MainActivity : AppCompatActivity() {
     var navController = navHostFragment.navController
     var bottomNav: BottomNavigationView = findViewById(R.id.bottom_navigation)
     bottomNav.setupWithNavController(navController)
-//        loadFragment(homeFragment)
 
-//        binding.bottomNavigation.setOnItemSelectedListener {item ->
-//            when(item.itemId){
-//                R.id.navigation_home -> loadFragment(homeFragment)
-//               R.id.navigation_cart -> loadFragment(cartFragment)
-//               R.id.navigation_menu -> loadFragment(menuFragment)
-//                R.id.navigation_user -> loadFragment(userFragment)
-//            }
-//            true
-//        }
     }
 
 }
